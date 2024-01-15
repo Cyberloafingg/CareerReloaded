@@ -194,7 +194,7 @@ class Moderator:
         data_dict = self.redis.fetch(session_id)
         return data_dict['person']
     
-    async def get_custom_info(self,session_id,message):
+    def get_custom_info(self,session_id,message):
         data_dict = self.redis.fetch(session_id)
         data_dict['message'] = message
         print("-----comein success-----")
