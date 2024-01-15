@@ -102,7 +102,7 @@ async def get_person(item: Item):
     return moderator.get_person_info(session_id)
 
 @app.post('/life-reload/send_info/')
-async def  send_data(item:Item):
+async def send_data(item:Item):
     session_id = item.session_id
     assert session_id is not None
     return moderator.get_custom_info(session_id,item.message)
