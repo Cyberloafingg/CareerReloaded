@@ -5,7 +5,9 @@ app01 = APIRouter()
 
 
 # 声明路径参数，即路径中的参数
+# 路径操作
 @app01.get('/user/{item_id}')
+# 路径函数
 def get_user(item_id: int):
     print(item_id)
     return {
